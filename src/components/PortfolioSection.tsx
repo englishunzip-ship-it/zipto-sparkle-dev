@@ -2,28 +2,32 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Ridoan Zisan Portfolio",
+    category: "Portfolio Website",
+    description: "Modern, responsive portfolio website showcasing skills, projects and achievements with stunning animations.",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    link: "https://ridoan-zisan.netlify.app",
+  },
+  {
+    title: "ZiptoCode Tech Solution",
+    category: "Business Website",
+    description: "Professional tech company website with modern UI, floating chat, WhatsApp integration and SEO optimization.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    link: "https://ziptocode.netlify.app",
+  },
+  {
+    title: "E-Commerce Dashboard",
     category: "Web Application",
-    description: "Full-featured online store with payment integration and inventory management.",
-    tags: ["React", "Firebase", "Stripe"],
+    description: "Complete admin dashboard for managing products, orders, customers and analytics with real-time updates.",
+    tags: ["React", "Firebase", "Chart.js"],
+    link: "#contact",
   },
   {
     title: "School Management System",
-    category: "Educational",
-    description: "Complete solution for student enrollment, attendance, and grade management.",
+    category: "Educational Platform",
+    description: "Full-featured school management with student enrollment, attendance tracking, grade management and parent portal.",
     tags: ["TypeScript", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Healthcare Portal",
-    category: "Healthcare",
-    description: "Patient appointment booking and medical records management system.",
-    tags: ["React", "PostgreSQL", "AWS"],
-  },
-  {
-    title: "Business Automation",
-    category: "Automation",
-    description: "Workflow automation for inventory and order processing.",
-    tags: ["Python", "APIs", "Zapier"],
+    link: "#contact",
   },
 ];
 
@@ -85,10 +89,12 @@ const PortfolioSection = () => {
                 </div>
 
                 <a
-                  href="#contact"
+                  href={project.link}
+                  target={project.link.startsWith("http") ? "_blank" : "_self"}
+                  rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="inline-flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all duration-300"
                 >
-                  View Details <ExternalLink className="w-4 h-4" />
+                  {project.link.startsWith("http") ? "Live Preview" : "View Details"} <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
             </div>
