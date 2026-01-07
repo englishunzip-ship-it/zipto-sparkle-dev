@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ExternalLink, MessageCircle, Home, Search, Filter, Phone, Facebook } from "lucide-react";
 import ziptocodelogo from "@/assets/ziptocode-logo.png";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const products = [
   {
@@ -446,6 +447,7 @@ const Store = () => {
           </p>
         </div>
       </footer>
+      <ScrollToTop />
     </div>
   );
 };

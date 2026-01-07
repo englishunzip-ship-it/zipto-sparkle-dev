@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ClientTrustBar from "@/components/ClientTrustBar";
@@ -18,7 +18,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FloatingChat from "@/components/FloatingChat";
-import { useState } from "react";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -68,6 +68,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <ScrollToTop isChatOpen={isChatOpen} />
       <FloatingWhatsApp isChatOpen={isChatOpen} />
       <FloatingChat onChatStateChange={setIsChatOpen} />
     </div>
