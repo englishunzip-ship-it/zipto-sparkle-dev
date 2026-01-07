@@ -39,9 +39,7 @@ const ScrollToTop = ({ isChatOpen = false }: ScrollToTopProps) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className={`fixed right-6 z-50 w-12 h-12 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
-            isChatOpen ? "bottom-[192px]" : "bottom-[192px]"
-          }`}
+          className="fixed left-6 bottom-6 z-50 w-12 h-12 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-lg flex items-center justify-center transition-all duration-300"
           aria-label="Scroll to top"
         >
           <ArrowUp size={20} />
